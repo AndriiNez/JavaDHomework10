@@ -15,13 +15,14 @@ public class Prefs {
     public static final String DEFAULT_PREFS_FILENAME = "prefs.json";
     private Map<String, Objects> prefs = new HashMap<>();
 
-    public Prefs(){
+    public Prefs() {
         this(DEFAULT_PREFS_FILENAME);
 
     }
-    public Prefs(String fileneme){
+
+    public Prefs(String fileneme) {
         try {
-            String json = String.join( "\n" ,Files.readAllLines(Path.of(fileneme)));
+            String json = String.join("\n", Files.readAllLines(Path.of(fileneme)));
             TypeToken<?> typeToken = TypeToken.getParameterized(
                     Map.class,
                     String.class,
@@ -31,10 +32,12 @@ public class Prefs {
             throw new RuntimeException(e);
         }
     }
-    public String getString(String key){
+
+    public String getString(String key) {
         return getPref(key).toString();
     }
-    public Object getPref(String key){
+
+    public Object getPref(String key) {
         return prefs.get(key);
     }
 }
