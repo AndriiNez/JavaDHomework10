@@ -9,10 +9,11 @@ import ua.homework.hibernate.HibernateUntil;
 import ua.homework.planet.Planet;
 import ua.homework.planet.PlanetCrudService;
 
+import java.io.IOException;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         new DatabaseMigrationsService().initDbService();
 
 
