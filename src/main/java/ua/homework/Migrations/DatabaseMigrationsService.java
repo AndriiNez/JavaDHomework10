@@ -5,7 +5,6 @@ import org.flywaydb.core.Flyway;
 import org.hibernate.cfg.Environment;
 
 
-
 import java.io.IOException;
 import java.util.Properties;
 
